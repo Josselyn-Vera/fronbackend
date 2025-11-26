@@ -1,0 +1,134 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.titulo-biblioteca {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Tarjetas */
+.card-libro {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 12px;
+  transition: 0.2s;
+}
+
+.card-libro:hover {
+  transform: scale(1.03);
+}
+
+/* Imagen */
+.card-libro img {
+  width: 100%;
+  height: 220px; /* MÁS PEQUEÑO */
+  object-fit: cover;
+}
+
+/* Texto */
+.card-libro h4 {
+  margin-top: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-libro p {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #555;
+}
+
+/* Botón */
+#btnCargarMas {
+  border-radius: 8px;
+}
+.btn-agregar-libro {
+  width: 45px;
+  height: 45px;
+  background-image: url('../img/agregar.png'); /* AQUÍ PONES TU IMAGEN */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+/* ======================= HEADER ======================= */
+.header-kitty {
+    background: linear-gradient(90deg, #ffffff, #ff9f43);
+    color: rgb(8, 7, 7);
+    border-bottom: 4px solid #000;
+}
+
+.logo-kitty {
+    width: 80px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.titulo-kitty {
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Buscador */
+.buscador-kitty input {
+    border-radius: 10px;
+    padding: 6px 12px;
+    border: 2px solid #000;
+    transition: 0.2s;
+}
+
+.buscador-kitty input:focus {
+    border-color: white;
+    box-shadow: 0 0 8px rgba(255,255,255,0.6);
+}
+/* ======================= MODALES KITTY ======================= */
+.modal-kitty {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 3px solid #000;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+
+.header-modal-kitty {
+    background: linear-gradient(90deg, #ff7b00, #ff9f43);
+    color: white;
+    border-bottom: 3px solid #000;
+}
+
+.input-kitty {
+    border: 2px solid #000;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.input-kitty:focus {
+    border-color: #ff7b00;
+    box-shadow: 0 0 8px rgba(255, 128, 0, 0.6);
+}
+
+/* Botones */
+.btn-kitty {
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+.btn-kitty-danger {
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+/* Imagen más pequeña */
+.portada-detalle {
+    width: 160px;   /* más pequeño */
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid #000;
+}

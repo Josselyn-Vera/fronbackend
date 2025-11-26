@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca General</title>
+    <link rel="stylesheet" href="./css/general.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-light">
+    <header class="header-kitty shadow-sm">
+    <div class="container d-flex justify-content-between align-items-center py-3">
+
+        <!-- Logo -->
+        <div class="d-flex align-items-center">
+            <img src="./img/iconoactual.png" alt="Kitty Logo" class="logo-kitty me-3">
+            <h1 class="titulo-kitty m-0">Kitty Biblioteca</h1>
+        </div>
+
+       <form id="formBuscador" class="d-flex buscador-kitty">
+    <input id="inputBuscar" class="form-control me-2" type="search" placeholder="Buscar libro..." />
+    <button class="btn btn-outline-dark" type="submit">🔍</button>
+</form>
+
+
+    </div>
+</header>
+
+
+    <main>
+        <div class="container py-4">
+            <div class="row align-items-center mb-4">
+
+                <div class="col-4">
+                    <h2 class="titulo-biblioteca mb-0">Libros Disponibles</h2>
+                </div>
+
+                <div class="col-8 d-flex justify-content-end">
+                    <button id="btnAgregarLibro" class="btn-agregar-libro" data-bs-toggle="modal"
+                        data-bs-target="#modalAgregarLibro"></button>
+
+
+                </div>
+
+            </div>
+
+            <div id="listaLibros" class="row g-4"></div>
+
+            <div class="text-center mt-4">
+                <button id="btnCargarMas" class="btn btn-dark px-4 py-2">Cargar más</button>
+            </div>
+
+        </div>
+        <!-- ======================= MODAL AGREGAR LIBRO ======================= -->
+<!-- ======================= MODAL AGREGAR LIBRO ======================= -->
+<div class="modal fade" id="modalAgregarLibro" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-kitty">
+
+      <div class="modal-header header-modal-kitty">
+        <h5 class="modal-title">➕ Agregar Libro</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="formAgregarLibro">
+
+          <div class="mb-3">
+            <label class="form-label">Título</label>
+            <input id="titulo" type="text" class="form-control input-kitty" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Autor</label>
+            <input id="autor" type="text" class="form-control input-kitty" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Categoría</label>
+            <input id="categoria" type="text" class="form-control input-kitty" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Año</label>
+            <input id="anio" type="number" class="form-control input-kitty" required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">URL Portada</label>
+            <input id="portada" type="url" class="form-control input-kitty" required>
+          </div>
+
+          <button type="submit" class="btn btn-dark w-100 btn-kitty">Guardar</button>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ======================= MODAL DETALLES LIBRO ======================= -->
+<!-- ======================= MODAL DETALLES LIBRO ======================= -->
+<div class="modal fade" id="modalDetalleLibro" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-kitty">
+
+      <div class="modal-header header-modal-kitty">
+        <h5 class="modal-title">📘 Detalles del Libro</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body text-center">
+
+        <img id="detallePortada" class="img-fluid portada-detalle mb-3 rounded" alt="Portada">
+
+        <p><strong>Título:</strong> <span id="detalleTitulo"></span></p>
+        <p><strong>Autor:</strong> <span id="detalleAutor"></span></p>
+        <p><strong>Categoría:</strong> <span id="detalleCategoria"></span></p>
+        <p><strong>Año:</strong> <span id="detalleAño"></span></p>
+
+      </div>
+
+      <div class="modal-footer d-flex justify-content-between">
+        <button class="btn btn-danger btn-kitty-danger" id="btnEliminarLibro">Eliminar</button>
+        <button class="btn btn-dark btn-kitty" id="btnEditarLibro">Editar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    </main>
+
+
+    <script src="./js/general.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

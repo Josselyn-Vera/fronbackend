@@ -1,0 +1,373 @@
+/* ============================ */
+/*           GLOBAL             */
+/* ============================ */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+button {
+  border-radius: 8px !important;
+}
+
+/* ============================ */
+/*         TÍTULO GENERAL       */
+/* ============================ */
+
+.titulo-biblioteca {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* ============================ */
+/*           CARRUSEL           */
+/* ============================ */
+
+/* Contenedor principal */
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* Track donde van los elementos */
+.carousel-track {
+  display: flex;
+  gap: 25px;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Tarjeta del libro */
+.card-libro {
+  min-width: 240px;
+  max-width: 240px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+/* Imagen */
+.card-libro img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Título */
+.card-libro h4 {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Autor y año */
+.card-libro p {
+  margin: 3px 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* ---------- Botones del carrusel ----------- */
+.carousel-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  gap: 20px;
+}
+
+.carousel-btn {
+  background: #111;
+  border: none;
+  padding: 10px 18px;
+  color: white;
+  font-size: 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #444;
+}
+
+/* ============================ */
+/*            FOOTER            */
+/* ============================ */
+
+#footer {
+  background-color: #000;
+  color: #fff;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Títulos */
+#footer .widget-title {
+  color: #ff7b00;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Texto */
+#footer p {
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Enlaces */
+#footer a {
+  color: #ff7b00;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#footer a:hover {
+  color: #fff;
+  padding-left: 5px;
+}
+
+/* Menú */
+#footer .menu-list .menu-item {
+  margin-bottom: 10px;
+}
+
+#footer .menu-list .item-anchor {
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+}
+
+#footer .menu-list .item-anchor:hover {
+  color: #ff7b00;
+}
+
+/* Línea animada */
+.border-animation-left .item-anchor::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #ff7b00;
+  transition: 0.3s;
+}
+
+.border-animation-left .item-anchor:hover::before {
+  width: 100%;
+}
+
+/* Redes sociales */
+.social-links svg {
+  fill: #fff;
+  transition: 0.3s;
+}
+
+.social-links a:hover svg {
+  fill: #ff7b00;
+  transform: scale(1.1);
+}
+
+/* Parte inferior */
+#footer .border-top {
+  border-top: 1px solid #ff7b00;
+  background-color: #111;
+}
+
+#footer .shipping span,
+#footer .payment-option span {
+  color: #ff7b00;
+  font-weight: 500;
+  margin-right: 10px;
+}
+
+/* Iconos */
+#footer img {
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  transition: 0.3s;
+}
+
+#footer img:hover {
+  opacity: 1;
+}
+
+/* Copyright */
+#footer p:last-child {
+  color: #bbb;
+}
+
+/* ============================ */
+/*            HEADER            */
+/* ============================ */
+
+header {
+  background-color: #ffffff;
+  border-bottom: 3px solid #ff7b00;
+}
+
+/* Menú */
+.nav-pills .nav-link {
+  border-radius: 0;
+  padding: 8px 15px;
+  transition: 0.3s;
+}
+
+.nav-pills .nav-link:hover {
+  color: #ff7b00 !important;
+  border-bottom: 2px solid #ff7b00;
+}
+
+/* Botón buscador */
+.btn-outline-dark {
+  border-color: #ff7b00;
+  color: #ff7b00;
+}
+
+.btn-outline-dark:hover {
+  background-color: #ff7b00;
+  color: #fff;
+}
+
+/* Input del buscador */
+form input {
+  border: 2px solid #ff7b00 !important;
+}
+.fila-libros {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tarjeta-libro {
+  width: 200px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.tarjeta-libro img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recomendado {
+  position: relative;
+}
+
+.etiqueta {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: gold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+/* ===== INFO SOBRE LA BIBLIOTECA ===== */
+.seccion-info-biblioteca {
+  padding: 60px 20px;
+  background: #fff7f2; /* cremita pastel */
+  color: #333;
+}
+
+.info-contenedor {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.seccion-info-biblioteca h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff6f3c; /* naranja kitty */
+}
+
+.seccion-info-biblioteca p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+  color: #444;
+}
+
+.info-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.info-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px;
+  width: 260px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all .3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.info-card i {
+  font-size: 40px;
+  color: #ff6f3c;
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* ===== BANNER FINAL ===== */
+.seccion-banner-final {
+  background: linear-gradient(to right, #ff6f3c, #ff9f68);
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+  margin-top: 60px;
+}
+
+.seccion-banner-final h2 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-explorar {
+  display: inline-block;
+  margin-top: 20px;
+  background: white;
+  color: #ff6f3c;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.btn-explorar:hover {
+  background: #ffe0d1;
+}

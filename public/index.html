@@ -1,2 +1,193 @@
-<!---error 404 -->
-<h2>pagina no encontrada</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca - CRUD</title>
+  <link rel="stylesheet" href="./css/estilo.css">
+  <!-- Bootstrap para responsividad -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+<header class="py-3 border-bottom">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center">
+
+    <!-- LOGO + NOMBRE -->
+    <a href="#" class="d-flex align-items-center text-dark text-decoration-none">
+      <img src="./img/iconoactual.png" alt="Kitty Logo" width="70" height="40" class="me-2">
+      <span class="fs-3 fw-bold">Kitty Biblioteca</span>
+    </a>
+
+    <!-- MENÚ -->
+    <ul class="nav nav-pills ms-3">
+      <li class="nav-item"><a href="#" class="nav-link text-dark fw-semibold">Inicio</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-dark fw-semibold">Catálogo</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-dark fw-semibold">Autores</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-dark fw-semibold">Categorías</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-dark fw-semibold">Nosotros</a></li>
+    </ul>
+
+    <!-- BUSCADOR -->
+    <form class="d-flex" role="search">
+      <input class="form-control me-2" type="search" placeholder="Buscar libros..." />
+      <button class="btn btn-outline-dark" type="submit">
+        🔍
+      </button>
+    </form>
+
+  </div>
+</header>
+
+ <main class="container-fluid py-4">
+<div class="container my-5">
+  <h2 class=" mb-4 titulo-biblioteca">Destacado</h2>
+
+  <div class="carousel-container">
+    <div class="carousel-track" id="carouselLibros"></div>
+  </div>
+
+  <div class="carousel-buttons">
+  <button id="prevBtn" class="carousel-btn">❮</button>
+  <button id="nextBtn" class="carousel-btn">❯</button>
+  <button id="btnGeneral" class="carousel-btn">📚</button>
+</div>
+
+</div>
+
+  <!-- ======== SECCIÓN SOBRE LA BIBLIOTECA ======== -->
+<section class="seccion-info-biblioteca">
+  <div class="info-contenedor">
+    <h2>Sobre la Biblioteca Kitty</h2>
+    <p>
+      La Biblioteca Kitty es un espacio digital dedicado a promover la lectura,
+      compartir historias y descubrir nuevos mundos a través de los libros.
+      Aquí encontrarás una colección en constante crecimiento, recomendaciones
+      personalizadas y herramientas para organizar tus lecturas.
+    </p>
+
+    <div class="info-cards">
+      <div class="info-card">
+        <i class="fa-solid fa-book-open"></i>
+        <h3>+10,000 Libros</h3>
+        <p>Explora una gran variedad de géneros y autores.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-users"></i>
+        <h3>Comunidad Activa</h3>
+        <p>Lectoras y lectores compartiendo sus favoritos.</p>
+      </div>
+
+      <div class="info-card">
+        <i class="fa-solid fa-star"></i>
+        <h3>Recomendaciones</h3>
+        <p>Recibe sugerencias basadas en tus gustos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== BANNER FINAL ======== -->
+<section class="seccion-banner-final">
+  <h2>¿Listo para descubrir tu próximo libro favorito?</h2>
+  <p>Explora el catálogo, agrega tus libros y empieza a leer hoy mismo.</p>
+  <a href="catalogo.html" class="btn-explorar">Explorar Catálogo</a>
+</section>
+
+
+</main>
+<footer id="footer" class="mt-5">
+  <div class="container">
+    <div class="row d-flex flex-wrap justify-content-between py-5">
+      
+      <!-- LOGO + DESCRIPCIÓN -->
+      <div class="col-md-3 col-sm-6">
+        <div class="footer-menu footer-menu-001">
+          <div class="footer-intro mb-4">
+            <a href="index.html">
+              <img src="./img/iconoactual.png" alt="Logo Biblioteca Kitty" height="233" width="233">
+            </a>
+          </div>
+          <p>Biblioteca Kitty es un espacio dedicado al aprendizaje, la lectura y la investigación. Encuentra libros, recursos digitales y actividades para toda la comunidad.</p>
+          <div class="social-links">
+            <ul class="list-unstyled d-flex flex-wrap gap-3">
+              <li><a href="#" class="text-secondary"><svg width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24"><use xlink:href="#youtube"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24"><use xlink:href="#pinterest"></use></svg></a></li>
+              <li><a href="#" class="text-secondary"><svg width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENÚ PRINCIPAL -->
+      <div class="col-md-3 col-sm-6">
+        <div class="footer-menu footer-menu-002">
+          <h5 class="widget-title text-uppercase mb-4">Servicios</h5>
+          <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
+            <li class="menu-item"><a href="#" class="item-anchor">Inicio</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Catálogo</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Nuevos libros</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Autores</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Actividades</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- INFORMACIÓN -->
+      <div class="col-md-3 col-sm-6">
+        <div class="footer-menu footer-menu-003">
+          <h5 class="widget-title text-uppercase mb-4">Información</h5>
+          <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
+            <li class="menu-item"><a href="#" class="item-anchor">Sobre nosotros</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Horarios</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Servicios digitales</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Club de lectura</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Reglamento</a></li>
+            <li class="menu-item"><a href="#" class="item-anchor">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- CONTACTO -->
+      <div class="col-md-3 col-sm-6">
+        <div class="footer-menu footer-menu-004 border-animation-left">
+          <h5 class="widget-title text-uppercase mb-4">Contáctanos</h5>
+          <p>Somos la <strong>Biblioteca Kitty</strong>. ¿Necesitas ayuda o deseas más información?</p>
+          <p>Escríbenos a: <a href="mailto:biblioteca.kitty@gmail.com" class="item-anchor">biblioteca.kitty@gmail.com</a></p>
+          <p>Teléfono: <a href="tel:+593000000000" class="item-anchor">000 000 0000</a></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PARTE INFERIOR -->
+  <div class="border-top py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 d-flex flex-wrap">
+          <div class="shipping">
+            <span>Servicios aliados:</span>
+            <img src="images/servicio1.png" alt="servicio">
+            <img src="images/servicio2.png" alt="servicio">
+          </div>
+          <div class="payment-option">
+            <span>Formas de pago:</span>
+            <img src="images/visa-card.png" alt="card">
+            <img src="images/paypal-card.png" alt="card">
+            <img src="images/master-card.png" alt="card">
+          </div>
+        </div>
+        <div class="col-md-6 text-end">
+          <p>© 2025 Biblioteca Kitty | Desarrollado por Josselyn Vera</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./js/carrusel.js"></script>
+</body>
+</html>
